@@ -315,6 +315,24 @@ def cardDeck():
     random.shuffle(deck)
     return deck
 
+
+def showHands(playerHand, dealerHand, showDealerHand):
+    """
+    Shows the players and dealers cards. Hides the dealers first card
+    """
+    print()
+    if showDealerHand:
+        print('DEALER:', handValue(dealerHand))
+        cardFormat(dealerHand)
+    else:
+        print('DEALER: ???')
+        # Hides the dealers first card and shows the second
+        cardFormat([CARDBACK] + dealerHand[1:])
+
+    # Shows the players cards
+    print('PLAYER:', handValue(playerHand))
+    cardFormat(playerHand)
+
 homeTitle()
 check_existing_user()
 gameRules()
