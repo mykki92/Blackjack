@@ -181,6 +181,100 @@ def displayGameRules():
     print("In the event of a tie the bet will be returned to the player.")
 
 
+def playBlackjack():
+    chips = 5000
+
+    # Main game loop that keeps count of the players money, places their
+    # bets, deals the cards and handles player moves. Once all moves are
+    # made the final hands are shown, the result is evaluated and the 
+    # winnings are added to or taken from the players account
+    while True:
+        # Check if the player has money to bet, exits the loop if money is 0
+        if chips <= 0:
+            print("Bust! Looks like you're outta luck!")
+            print("Thanks for playing, come again soon!")
+            sys.exit()
+
+        # Player places their bet at the start of each round
+        print('Chips:', chips)
+        bet = placeBet(chips)
+
+        # Deals two cards each to the dealer and the player
+        deck = cardDeck()
+        dealerHand = [deck.pop(), deck.pop()]
+        playerHand = [deck.pop(), deck.pop()]
+
+        # Handle player actions, lets the player hit, stand or double down on their bet
+        # Loops until the player stands or busts
+        print('Bet:', bet)
+        while True:
+            showHands(playerHand, dealerHand, False)
+            print()
+
+            # Evaluates the value of the players hand, breaks the loop and busts if the
+            # value is over 21
+            if handValue(playerHand) > 21:
+                break
+
+            # Executes the players move, either H, S or D to hit, stand or double down
+            move = playerMove(playerHand, chips - bet)
+
+            # Double down, player can increase their bet, will also draw another card
+            if move == 'D':
+                additionalBet = placeBet(min(bet, (chips - bet)))
+                bet += additionalBet
+                print('Bet increased to {}.'.format(bet))
+                print('Bet:', bet)
+
+            # Draws another card if the player has chosen to hit or double down
+            if move in ('H', 'D'):
+                newCard = deck.pop()
+                rank, suit = newCard
+                print('You drew a {} of {}.'.format(rank, suit))
+                playerHand.append(newCard)
+
+                # Bust if the player hand is over 21
+                if handValue(playerHand) > 21:
+                    continue
+
+            # Stand or double down stops the players turn
+            if move in ('S', 'D'):
+                break
+        
+        # Handles the dealer actions
+        if handValue(playerHand) <= 21:
+            while handValue(dealerHand) < 17:
+                # The dealer hits
+                print('Dealer hits...')
+                dealerHand.append(deck.pop())
+                showHands(playerHand, dealerHand, False)
+
+                if handValue(dealerHand) > 21:
+                    # Dealer has bust
+                    break
+                input('Press Enter to continue...')
+                print('\n\n')
+
+        # Shows the final hands for the player and the dealer
+        showHands(playerHand, dealerHand, True)
+
+        playerValue = handValue(playerHand)
+        dealerValue = handValue(dealerHand)
+        # Evaluate results of the round, win, lose or tie
+        if dealerValue > 21:
+            print('Dealer busts! You win {}!'.format(bet))
+            chips += bet
+        elif (playerValue > 21) or (playerValue < dealerValue):
+            print('Unlucky!')
+            chips -= bet
+        elif playerValue > dealerValue:
+            print('You won {}!'.format(bet))
+            chips += bet
+        elif playerValue == dealerValue:
+            print('Tie! Your bet is returned.')
+
+        input('Press Enter to play again!')
+        print('\n\n')
 
 
 homeTitle()
