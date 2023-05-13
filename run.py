@@ -9,6 +9,8 @@ from gsheet import get_login_data
 from gsheet import update_login_data
 from gsheet import validate_user_login
 
+current_user = {'name': 'Remo'}
+
 
 def check_existing_user():
     """
@@ -17,7 +19,7 @@ def check_existing_user():
     """
     exist_check = input("Have you played before? Y/N\n")
     if exist_check.upper() == "Y":
-        check_user()
+        sign_in()
     elif exist_check.upper() == "N":
         add_new_user()
     else:
@@ -48,13 +50,13 @@ def add_new_user():
         update_login_data(login)
         time.sleep(2)
         os.system('clear')
-        check_user()
+        sign_in()
     else:
         time.sleep(2)
         add_new_user()
 
 
-def check_user():
+def sign_in():
     """
     Validates the users login information by comparing against
     data stored in the googlesheet
@@ -74,7 +76,6 @@ def check_user():
                 print("\nLog in successful!")
                 time.sleep(2)
                 os.system('clear')
-                # head()
                 current_user['name'] = data['USERNAME']
                 print(f"\nWelcome back {current_user['name']}")
             else:
