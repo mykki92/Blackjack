@@ -362,6 +362,32 @@ def handValue(cards):
     
     return value
 
+
+def cardFormat(cards):
+    """
+    Formats the cards in the terminal using the cards rank and suit
+    """
+    # A list of empty strings for each row
+    rows = ['', '', '', '', '']
+
+    for i, card in enumerate(cards):
+        # Top line of each card
+        rows[0] += '  __  '
+        if card == CARDBACK:
+            # Formats the card backs
+            rows[1] += '|## | '
+            rows[2] += '|###| '
+            rows[3] += '|_##| '
+        else:
+            # Formats the card fronts with rank and suit
+            rank, suit = card
+            rows[1] += '|{} | '.format(rank.ljust(2))
+            rows[2] += '| {} | '.format(suit)
+            rows[3] += '|_{}| '.format(rank.rjust(2, '_'))
+
+    for row in rows:
+        print(row)
+
 homeTitle()
 check_existing_user()
 gameRules()
