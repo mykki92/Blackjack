@@ -12,6 +12,28 @@ from gsheet import validate_user_login
 current_user = {'name': 'Remo'}
 
 
+def gameTitle():
+    """
+    Function to display head of the game
+    """
+    print("==================================================================================")
+    time.sleep(1)
+    print("$$$$$$$\  $$\                     $$\                               $$\ ")         
+    print("$$  __$$\ $$ |                    $$ |                              $$ | ")        
+    print("$$ |  $$ |$$ | $$$$$$\   $$$$$$$\ $$ |  $$\ $$\  $$$$$$\   $$$$$$$\ $$ |  $$\ ")   
+    print("$$$$$$$\ |$$ | \____$$\ $$  _____|$$ | $$  |\__| \____$$\ $$  _____|$$ | $$  | ")  
+    print("$$  __$$\ $$ | $$$$$$$ |$$ /      $$$$$$  / $$\  $$$$$$$ |$$ /      $$$$$$  / ")   
+    print("$$ |  $$ |$$ |$$  __$$ |$$ |      $$  _$$<  $$ |$$  __$$ |$$ |      $$  _$$< ")   
+    print("$$$$$$$  |$$ |\$$$$$$$ |\$$$$$$$\ $$ | \$$\ $$ |\$$$$$$$ |\$$$$$$$\ $$ | \$$\ ")  
+    print("\_______/ \__| \_______| \_______|\__|  \__|$$ | \_______| \_______|\__|  \__| ") 
+    print("______________________________________$$\   $$ |______________________________ ")                                
+    print("                                      \$$$$$$  | ")                               
+    print("                                       \______/ ")                                 
+    time.sleep(1)
+    time.sleep(1)
+    print("==================================================================================")
+
+
 def check_existing_user():
     """
     Checks if user already has a login, if yes asks them to log in,
@@ -77,15 +99,15 @@ def sign_in():
                 time.sleep(2)
                 os.system('clear')
                 current_user['name'] = data['USERNAME']
-                print(f"\nWelcome back {current_user['name']}")
+                print(f"\nWelcome back {current_user['name']}!")
             else:
                 print("Incorrect password, try again")
-                check_existing_user()
+                sign_in()
         else:
             check_login += 1
     if check_login == len(logins):
         print("User does not exist, try again")
         check_existing_user()
 
-
+gameTitle()
 check_existing_user()
