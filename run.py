@@ -388,6 +388,28 @@ def cardFormat(cards):
     for row in rows:
         print(row)
 
+
+def playerMove(playerHand, chips):
+    """
+    Asks the player for their move and returns 'H' for hit, 'S' for
+    stand and 'D' for double down
+    """
+    while True: 
+        # Displays the available moves to the player
+        moves = ['(H)it', '(S)tand']
+
+        # The player can double down on their bet when their cards are first dealt
+        if len(playerHand) == 2 and chips > 0:
+            moves.append('(D)ouble down')
+
+        # Get the players move
+        movePrompt = ', '.join(moves) + '> '
+        move = input(movePrompt).upper()
+        if move in ('H', 'S'):
+            return move 
+        if move == 'D' and '(D)ouble down' in moves:
+            return move
+
 homeTitle()
 check_existing_user()
 gameRules()
