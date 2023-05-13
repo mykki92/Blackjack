@@ -299,6 +299,22 @@ def placeBet(maxBet):
         if 1 <= bet <= maxBet:
             return bet
 
+
+def cardDeck():
+    """
+    Returns a list of tuples with the rank and suit for all 52 cards in the deck
+    """
+    deck = []
+    for suit in (SPADES, CLUBS, HEARTS, DIAMONDS):
+        # Numbered cards between 2 and 10
+        for rank in range (2, 11):
+            deck.append((str(rank), suit))
+        # Jacks, Queens, Kings and Aces
+        for rank in ('J', 'Q', 'K', 'A'):
+            deck.append((rank, suit))
+    random.shuffle(deck)
+    return deck
+
 homeTitle()
 check_existing_user()
 gameRules()
