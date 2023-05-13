@@ -277,6 +277,28 @@ def playBlackjack():
         print('\n\n')
 
 
+def placeBet(maxBet):
+    """
+    Lets the player input their bet amount or use 'EXIT' to exit the loop.
+    Will only accept valid integers as a bet
+    """
+    while True:
+        # Player inputs their bet amount or has the option to exit the game
+        print('How much you wanna bet?? (1-{}, or EXIT)'.format(maxBet))
+        bet = input('> ').upper().strip()
+        if bet == 'EXIT':
+            print('Thanks for playing, come again soon!')
+            sys.exit()
+
+        # Loops the function to place a bet if player enters an invalid value
+        if not bet.isdecimal():
+            continue
+
+        # Places the players bet if the value is a valid integer
+        bet = int(bet)
+        if 1 <= bet <= maxBet:
+            return bet
+
 homeTitle()
 check_existing_user()
 gameRules()
