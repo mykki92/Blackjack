@@ -9,6 +9,14 @@ from gsheet import get_login_data
 from gsheet import update_login_data
 from gsheet import validate_user_login
 
+# Global variables using Unicode code points
+# to set symbols for card suits
+SPADES = chr(9824)
+CLUBS = chr(9827)
+HEARTS = chr(9829)
+DIAMONDS = chr(9830)
+CARDBACK = 'cardback'
+
 current_user = {'name': 'Remo'}
 
 
