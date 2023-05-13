@@ -14,7 +14,7 @@ current_user = {'name': 'Remo'}
 
 def homeTitle():
     """
-    Function to display head of the game
+    Function to display the game title with card suit logos
     """
     print("==============================================================================")
     time.sleep(1)
@@ -41,12 +41,32 @@ def homeTitle():
     print("==============================================================================")
 
 
+def gameTitle():
+    """
+    Function to display the game title above the start of the game without the suit logos
+    """
+    print("==============================================================================")
+    time.sleep(1)
+    print("$$$$$$$\  $$\                     $$\                               $$\ ")         
+    print("$$  __$$\ $$ |                    $$ |                              $$ | ")        
+    print("$$ |  $$ |$$ | $$$$$$\   $$$$$$$\ $$ |  $$\ $$\  $$$$$$\   $$$$$$$\ $$ |  $$\ ")   
+    print("$$$$$$$\ |$$ | \____$$\ $$  _____|$$ | $$  |\__| \____$$\ $$  _____|$$ | $$  | ")  
+    print("$$  __$$\ $$ | $$$$$$$ |$$ /      $$$$$$  / $$\  $$$$$$$ |$$ /      $$$$$$  / ")   
+    print("$$ |  $$ |$$ |$$  __$$ |$$ |      $$  _$$<  $$ |$$  __$$ |$$ |      $$  _$$< ")   
+    print("$$$$$$$  |$$ |\$$$$$$$ |\$$$$$$$\ $$ | \$$\ $$ |\$$$$$$$ |\$$$$$$$\ $$ | \$$\ ")  
+    print("\_______/ \__| \_______| \_______|\__|  \__|$$ | \_______| \_______|\__|  \__| ") 
+    print("======================================$$\   $$ |============================== ")                                
+    print("                                      \$$$$$$  | ")                               
+    print("                                       \______/ ")                                 
+    time.sleep(1)
+    print("==============================================================================")
+
 def check_existing_user():
     """
     Checks if user already has a login, if yes asks them to log in,
     if no asks them to sign up
     """
-    exist_check = input("Have you played before? Y/N\n")
+    exist_check = input("Have you played here before? Y/N\n")
     if exist_check.upper() == "Y":
         sign_in()
     elif exist_check.upper() == "N":
@@ -69,7 +89,6 @@ def add_new_user():
     print("Username and Password should be at least 6 characters")
     time.sleep(1)
     user_input = input("\nEnter New Username:\n")
-    time.sleep(1)
     user_password = input("\nEnter New Password: \n")
     time.sleep(1)
 
@@ -77,7 +96,6 @@ def add_new_user():
     if validate:
         login = [user_input, user_password]
         update_login_data(login)
-        time.sleep(2)
         os.system('clear')
         sign_in()
     else:
@@ -103,9 +121,10 @@ def sign_in():
         if username == data['USERNAME']:
             if password == data['PASSWORD']:
                 print("\nLog in successful!")
-                time.sleep(2)
+                time.sleep(1)
                 os.system('clear')
                 current_user['name'] = data['USERNAME']
+                gameTitle()
                 print(f"\nWelcome back {current_user['name']}!")
             else:
                 print("Incorrect password, try again")
@@ -116,5 +135,47 @@ def sign_in():
         print("User does not exist, try again")
         check_existing_user()
 
+def gameRules():
+    """
+    Asks the player if they would like to see the game rules before they start the game
+    """
+    rules = input("Would you like to see the game rules? Y/N\n")
+    if rules.upper() == "Y":
+        displayGameRules()
+    elif rules.upper() == "N":
+        input("Ready to play? Y/N\n")
+        gameRules()
+    else:
+        print("Invalid input, type Y or N")
+        gameRules()
+
+
+def displayGameRules():
+    """
+    Function that prints the game rules to the console once the player has signed in
+    """
+    print("Starting with 2 cards, try to get as close to 21 as possible.")
+    time.sleep(1)
+    print("Going over 21 is a bust and you will lose your bet.")
+    time.sleep(1)
+    print("Numbered cards are worth the value on the card.")
+    time.sleep(1)
+    print("Kings, Queens and Jacks are worth 10.")
+    time.sleep(1)
+    print("Aces are worth 1 or 11, depending on the value of your other card.")
+    time.sleep(1)
+    print("Press 'H' to hit and take another card.")
+    time.sleep(1)
+    print("Press 'S' to stand and stop taking cards.")
+    time.sleep(1)
+    print("On your first turn you can press 'D' to double down and increase your bet.")
+    time.sleep(1)
+    print("In the event of a tie the bet will be returned to the player.")
+
+
+
+
 homeTitle()
 check_existing_user()
+gameRules()
+
