@@ -333,6 +333,35 @@ def showHands(playerHand, dealerHand, showDealerHand):
     print('PLAYER:', handValue(playerHand))
     cardFormat(playerHand)
 
+
+def handValue(cards):
+    """
+    Returns the value of the cards. Numbered cards are worth their displayed number,
+    Jacks, Queens and Kings are worth 10. Aces are worth 11 or 1, an ace will be
+    assigned a value of 11 unless that would equal more than 21, in which case it 
+    will be assigned a value of 1
+    """
+    value = 0 
+    acesDealt = 0
+
+    # Adds the value for Jacks, Queens and Kings
+    for card in cards:
+        rank = card[0]
+        if rank == 'A':
+            acesDealt += 1
+        elif rank in ('K', 'Q', 'J'):
+            value += 10
+        else:
+            value += int(rank)
+
+    # Add the value for the Aces
+    value += acesDealt
+    for i in range(acesDealt):
+        if value + 10 <= 21:
+            value += 10
+    
+    return value
+
 homeTitle()
 check_existing_user()
 gameRules()
