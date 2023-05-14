@@ -22,7 +22,9 @@ current_user = {'name': 'password'}
 
 def homeTitle():
     """
-    Function to display the game title with card suit logos
+    Function to display the game title with card suit logos. Lettering was created using
+    ASCII art generator (https://patorjk.com/), and the card suit symbols were taken from
+    https://ascii.co.uk/art/cards, credited to "B.K. Bullock"
     """
     print("==============================================================================")
     time.sleep(1)
