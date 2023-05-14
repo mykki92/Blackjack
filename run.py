@@ -151,8 +151,7 @@ def gameRules():
     if rules.upper() == "Y":
         displayGameRules()
     elif rules.upper() == "N":
-        input("Ready to play? Y/N\n")
-        gameRules()
+        startGame()
     else:
         print("Invalid input, type Y or N")
         gameRules()
@@ -179,6 +178,23 @@ def displayGameRules():
     print("On your first turn you can press 'D' to double down and increase your bet.")
     time.sleep(1)
     print("In the event of a tie the bet will be returned to the player.")
+    startGame()
+
+
+def startGame():
+    """
+    Function to let the player start the game, go back to the rules or exit the game
+    """
+    start_game = input("Ready to play Blackjack? Y/N/EXIT\n")
+    if start_game.upper() == "Y":
+        playBlackjack()
+    elif start_game.upper() == "N":
+        gameRules()
+    elif start_game.upper() == "EXIT":
+        sys.exit()
+    else:
+        print("Invalid input, type Y or N")
+        startGame()
 
 
 def playBlackjack():
@@ -413,4 +429,5 @@ def playerMove(playerHand, chips):
 homeTitle()
 check_existing_user()
 gameRules()
+
 
