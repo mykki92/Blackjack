@@ -6,7 +6,7 @@ Developed by Michael Roberts
 [Link to live site]()
 
 ## Introduction
-Blackjack, also known as 21, is a card game where players try to get as close as to 21 as possible without going over.
+Blackjack, also known as 21, is a card game where players attempt to reach a score of 21 — without exceeding it — before the dealer hits 17. You can win if you don't bust and your total is higher than the dealer cards.
 
 
 ## Contents
@@ -49,11 +49,11 @@ Blackjack, also known as 21, is a card game where players try to get as close as
 
 ### User Stories
 
-#### As a first time user...
+#### First Time User
 
-#### As a returning user... 
+#### Returning User 
 
-#### As the site owner...
+#### Site Owner
 
 ## Technical Design
 
@@ -65,7 +65,7 @@ Blackjack, also known as 21, is a card game where players try to get as close as
 
 ### App Features
 
-### Feature Ideas for future development
+### Feature Ideas for Future Development
 
 ## Technologies Used
 
@@ -83,7 +83,7 @@ Blackjack, also known as 21, is a card game where players try to get as close as
 
 ### Validation
 
-#### PEP8 Python Validator (from Code Institute)
+#### PEP8 Python Validator (Code Institute)
 
 ### Manual Testing
 
@@ -93,9 +93,9 @@ Blackjack, also known as 21, is a card game where players try to get as close as
 
 ## Credits
 
-### 3rd party code used
+### 3rd Party Code Used
 
-#### 3rd party Python libraries/modules
+#### 3rd Party Python Libraries/Modules
 
 ### Acknowledgements
 
