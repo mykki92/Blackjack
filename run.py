@@ -17,7 +17,7 @@ HEARTS = chr(9829)
 DIAMONDS = chr(9830)
 CARDBACK = 'cardback'
 
-current_user = {'name': 'Remo'}
+current_user = {'name': 'password'}
 
 
 def homeTitle():
@@ -239,14 +239,14 @@ def playBlackjack():
             if move == 'D':
                 additionalBet = placeBet(min(bet, (chips - bet)))
                 bet += additionalBet
-                print('Bet increased to {}.'.format(bet))
+                print(f'Bet increased to {bet}.')
                 print('Bet:', bet)
 
             # Draws another card if the player has chosen to hit or double down
             if move in ('H', 'D'):
                 newCard = deck.pop()
                 rank, suit = newCard
-                print('You drew a {} of {}.'.format(rank, suit))
+                print(f'You drew a {rank} of {suit}.')
                 playerHand.append(newCard)
 
                 # Bust if the player hand is over 21
@@ -278,13 +278,13 @@ def playBlackjack():
         dealerValue = handValue(dealerHand)
         # Evaluate results of the round, win, lose or tie
         if dealerValue > 21:
-            print('Dealer busts! You win {}!'.format(bet))
+            print(f'Dealer busts! You win {bet}!')
             chips += bet
         elif (playerValue > 21) or (playerValue < dealerValue):
             print('Unlucky!')
             chips -= bet
         elif playerValue > dealerValue:
-            print('You won {}!'.format(bet))
+            print(f'You won {bet}!')
             chips += bet
         elif playerValue == dealerValue:
             print('Tie! Your bet is returned.')
@@ -300,7 +300,7 @@ def placeBet(maxBet):
     """
     while True:
         # Player inputs their bet amount or has the option to exit the game
-        print('How much you wanna bet?? (1-{}, or EXIT)'.format(maxBet))
+        print(f'How much you wanna bet?? (1-{maxBet}, or EXIT)')
         bet = input('> ').upper().strip()
         if bet == 'EXIT':
             print('Thanks for playing, come again soon!')
