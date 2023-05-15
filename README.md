@@ -1,7 +1,7 @@
 # **Blackjack**
 Developed by Michael Roberts
 
-<img src="INSERT AMIRESPONIVE" alt="A screenshot of Am I Responsive representation of the website">
+<img src="docs/am-i-responsive.png" alt="A screenshot of Am I Responsive representation of the website">
 
 [Link to live site](https://blackjackpython.herokuapp.com/)
 
