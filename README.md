@@ -36,24 +36,44 @@ Blackjack, also known as 21, is a card game where players attempt to reach a sco
 ## Project Goals
 
 ### User Goals
+* Play a blackjack game and try and win as many chips as possible.
+* To understand the instructions and how to play the game.
+* To sign up with a new account.
+* Log back in to an existing account.
 
 ### Site Owner Goals
+* To provide users with clear instructions on how to play the game and navigate the program.
+* To make sure any user errors are handled and communicated back to the user.
 
 ## User Experience
 
 ### Target audience
+* This game is targeted at people with an interest in Blackjack and people with an interest in computer gaming in general.
 
 ### User requirements
+* A game that is understandable and works as expected.
+* Log-in works as expected and validates user input correctly.
+* Game moves and the betting system is clearly communicated and displayed to the user.
+* User can quit the game when they want.
 
 ### User Manual
 
 ### User Stories
 
 #### First Time User
+1. Set a username and password to sign up for a game account.
+2. Have instructions on how to play the game before starting.
+3. To have a visual representation of the Blackjack game.
+4. For inputs to work as expected and any errors to be flagged by the program.
+5. For the program to be responsive and provide clear progress through the steps of the game.
 
 #### Returning User 
+7. Be able to log in with their existing username and password.
+8. Be able skip the instructions if they are familiar with the game.
 
 #### Site Owner
+11. Ensure that all data entered by the user is validated so as not to break the program or create bad user experience.
+12. Ensure that all user actions are given feedback in the terminal so that users know what to do next in the game.
 
 ## Technical Design
 
