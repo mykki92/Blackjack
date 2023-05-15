@@ -97,7 +97,6 @@ def add_new_user():
     time.sleep(1)
     print("\nUsername and Password are case sensitive")
     print("Username and Password should be at least 6 characters")
-    time.sleep(1)
     user_input = input("\nEnter New Username:\n")
     user_password = input("\nEnter New Password: \n")
     time.sleep(1)
