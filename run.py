@@ -119,9 +119,7 @@ def sign_in():
     """
     time.sleep(1)
     print("\nLOGIN TO PLAY BLACKJACK!")
-    time.sleep(1)
     username = input("\nUsername: \n")
-    time.sleep(1)
     password = input("\nPassword: \n")
 
     logins = get_login_data()
