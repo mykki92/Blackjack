@@ -34,7 +34,6 @@ Blackjack, also known as 21, is a card game where players attempt to reach a sco
 * [Credits](#credits)
 
 ## Project Goals
-
 ### User Goals
 * Play a blackjack game and try and win as many chips as possible.
 * To understand the instructions and how to play the game.
@@ -46,7 +45,6 @@ Blackjack, also known as 21, is a card game where players attempt to reach a sco
 * To make sure any user errors are handled and communicated back to the user.
 
 ## User Experience
-
 ### Target audience
 * This game is targeted at people with an interest in Blackjack and people with an interest in computer gaming in general.
 
@@ -59,7 +57,6 @@ Blackjack, also known as 21, is a card game where players attempt to reach a sco
 ### User Manual
 
 ### User Stories
-
 #### First Time User
 1. Set a username and password to sign up for a game account.
 2. Have instructions on how to play the game before starting.
@@ -76,22 +73,30 @@ Blackjack, also known as 21, is a card game where players attempt to reach a sco
 12. Ensure that all user actions are given feedback in the terminal so that users know what to do next in the game.
 
 ## Technical Design
-
 ### Flowchart
 
 ### Data Models
+* The Google Sheets API was used for user data.
+    * This allows user data to be saved so a user can create an account and use it to sign in to the game.
 
 ## Features
-
+The website has a single page with several features within the mock python terminal. These features are listed below.
 ### App Features
 
 ### Feature Ideas for Future Development
-
+In future the website could be further developed and improved to offer more games and expand into a general casino-type application, with additional games such as poker, roulette and slot machine games.
+ 
 ## Technologies Used
 
 ### Languages Used
+Python
 
 ### Other Tools Used
+* [Git](https://git-scm.com/) was used for version control.
+* [GitHub](https://github.com/) was used for saving and storing files.
+* [CodeAnywhere](https://app.codeanywhere.com/) was the IDE used for writing and editing code.
+* [Heroku](https://id.heroku.com/) was used as the hosting platform for this site.
+* [Ascii art generator](http://patorjk.com/software/taag/#p=display&f=Varsity&t=Dungeon%0AEscape) was used to generate title text.
 
 #### 3rd Party Python Libraries Used
 
