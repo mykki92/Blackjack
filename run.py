@@ -99,6 +99,7 @@ def sign_in():
                 time.sleep(1)
                 os.system('clear')
                 current_user['name'] = data['USERNAME']
+                homeTitle()
                 print(f"\nWelcome back {current_user['name']}!")
             else:
                 print("Incorrect password, try again")
@@ -144,7 +145,7 @@ def displayGameRules():
     time.sleep(1)
     print("Press 'S' to stand and stop taking cards.")
     time.sleep(1)
-    print("On your first turn you can press 'D' to double down")
+    print("On your first turn you can press 'D' to double down.")
     time.sleep(1)
     print("You can increase your bet up to the value of your initial bet.")
     time.sleep(1)
