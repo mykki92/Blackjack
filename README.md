@@ -178,10 +178,11 @@ The site was tested on the following devices:
 |Between inputting their username and the password input loading, the user could input characters into empty lines, causing issues with login. | Remove time.sleep(1) from between the username and password inputs being loaded. |
 
 ## Credits
-
-### 3rd Party Code Used
-
-#### 3rd Party Python Libraries/Modules
+### 3rd Party Python Libraries/Modules
+* [Gspread / Google Sheets API](https://github.com/burnash/gspread) was used to handle getting/sending data to the google sheet used in the project.
+* [Google OAuth 2.0](https://google-auth.readthedocs.io/en/stable/reference/google.oauth2.credentials.html) was used to set up the connection between the project and the developers personal google account.
+* [ASCII art generator](https://patorjk.com/software/taag/#p=display&f=Big%20Money-ne&t=Blackjack) was used to generate title text.
 
 ### Acknowledgements
-
+* My Code Institute Mentor Mo Shami for his guidance and advice.
+* Code Institute learning modules and tutor support.
