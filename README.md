@@ -173,6 +173,9 @@ The site was tested on the following devices:
 ### Automated Testing
 
 ### Bugs
+| Bug Description  | Fix  |
+|---|---|
+|Between inputting their username and the password input loading, the user could input characters into empty lines, causing issues with login. | Remove time.sleep(1) from between the username and password inputs being loaded. |
 
 ## Credits
 
