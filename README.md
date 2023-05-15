@@ -85,7 +85,7 @@ The website has a single page with several features within the mock python termi
 
 ### Feature Ideas for Future Development
 In future the website could be further developed and improved to offer more games and expand into a general casino-type application, with additional games such as poker, roulette and slot machine games.
- 
+
 ## Technologies Used
 
 ### Languages Used
@@ -96,9 +96,11 @@ Python
 * [GitHub](https://github.com/) was used for saving and storing files.
 * [CodeAnywhere](https://app.codeanywhere.com/) was the IDE used for writing and editing code.
 * [Heroku](https://id.heroku.com/) was used as the hosting platform for this site.
-* [Ascii art generator](http://patorjk.com/software/taag/#p=display&f=Varsity&t=Dungeon%0AEscape) was used to generate title text.
+* [ASCII art generator](https://patorjk.com/software/taag/#p=display&f=Big%20Money-ne&t=Blackjack) was used to generate title text.
 
 #### 3rd Party Python Libraries Used
+* [Gspread / Google Sheets API](https://github.com/burnash/gspread) was used to handle getting/sending data to the google sheet used in the project. This is also not a standard feature of python, so it was necessary to install it for the purposes of this project.
+* [Google OAuth 2.0](https://google-auth.readthedocs.io/en/stable/reference/google.oauth2.credentials.html) was used to set up the connection between the project and the developers personal google account. This was necessary because access to a google account via a program is restricted for security reasons.
 
 ## Deployment & Local Development
 The website was deployed to [Heroku](https://id.heroku.com/) using the following process:
@@ -140,16 +142,27 @@ This repository can be cloned using the following process:
 1. Go to this repository's page on GitHub.
 2. Click on the code button (not the one in the navbar, but the one right above the file list).
 3. Select an option, HTTPS, SSH, GitHub CLI.
-4. Copy the url below to your clipboard.
+4. Copy the URL below to your clipboard.
 5. Open Git Bash/your IDE terminal.
 6. Ensure the directory you are working in is the correct one you want to paste the project into.
-7. Type the command '$ git clone'
+7. Type the command '$ git clone'.
 8. Paste the URL of the repository after this.
 9. Hit enter on your keyboard and the project will be cloned.
 
 ## Testing
+### Device Testing
+The site was tested using the following browsers: 
+* Google Chrome
+* Mozilla Firefox
+* Microsoft Edge
+* Safari
 
-### Debugging
+# Browser Compatability
+The site was tested on the following devices:
+* Google Pixel 7
+* Samsung Galaxy A7 Lite Tab
+* HP Laptop 14
+* Apple iMac
 
 ### Validation
 
