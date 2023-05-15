@@ -3,7 +3,7 @@ Developed by Michael Roberts
 
 <img src="INSERT AMIRESPONIVE" alt="A screenshot of Am I Responsive representation of the website">
 
-[Link to live site]()
+[Link to live site](https://blackjackpython.herokuapp.com/)
 
 ## Introduction
 Blackjack, also known as 21, is a card game where players attempt to reach a score of 21 — without exceeding it — before the dealer hits 17. You can win if you don't bust and your total is higher than the dealer cards.
