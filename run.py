@@ -109,9 +109,11 @@ def sign_in():
         print("User does not exist, try again")
         check_existing_user()
 
+
 def gameRules():
     """
-    Asks the player if they would like to see the game rules before they start the game
+    Asks the player if they would like to see the game rules before 
+    they start the game
     """
     rules = input("Would you like to see the game rules? Y/N\n")
     if rules.upper() == "Y":
@@ -125,7 +127,8 @@ def gameRules():
 
 def displayGameRules():
     """
-    Function that prints the game rules to the console once the player has signed in
+    Function that prints the game rules to the console once the player has 
+    signed in
     """
     print("Starting with 2 cards, try to get as close to 21 as possible.")
     time.sleep(1)
@@ -141,7 +144,9 @@ def displayGameRules():
     time.sleep(1)
     print("Press 'S' to stand and stop taking cards.")
     time.sleep(1)
-    print("On your first turn you can press 'D' to double down and increase your bet.")
+    print("On your first turn you can press 'D' to double down")
+    time.sleep(1)
+    print("You can increase your bet up to the value of your initial bet.")
     time.sleep(1)
     print("In the event of a tie the bet will be returned to the player.")
     startGame()
@@ -149,7 +154,8 @@ def displayGameRules():
 
 def startGame():
     """
-    Function to let the player start the game, go back to the rules or exit the game
+    Function to let the player start the game, go back to the rules or 
+    exit the game
     """
     start_game = input("Ready to play Blackjack? Y/N/EXIT\n")
     if start_game.upper() == "Y":
@@ -186,22 +192,24 @@ def playBlackjack():
         dealerHand = [deck.pop(), deck.pop()]
         playerHand = [deck.pop(), deck.pop()]
 
-        # Handle player actions, lets the player hit, stand or double down on their bet
-        # Loops until the player stands or busts
+        # Handle player actions, lets the player hit, stand or double down 
+        # on their bet. Loops until the player stands or busts
         print('Bet:', bet)
         while True:
             showHands(playerHand, dealerHand, False)
             print()
 
-            # Evaluates the value of the players hand, breaks the loop and busts if the
-            # value is over 21
+            # Evaluates the value of the players hand, breaks the loop 
+            # and busts if the value is over 21
             if handValue(playerHand) > 21:
                 break
 
-            # Executes the players move, either H, S or D to hit, stand or double down
+            # Executes the players move, either H, S or D to hit, stand 
+            # or double down
             move = playerMove(playerHand, chips - bet)
 
-            # Double down, player can increase their bet, will also draw another card
+            # Double down, player can increase their bet
+            # Will also draw another card
             if move == 'D':
                 additionalBet = placeBet(min(bet, (chips - bet)))
                 bet += additionalBet
@@ -222,7 +230,7 @@ def playBlackjack():
             # Stand or double down stops the players turn
             if move in ('S', 'D'):
                 break
-        
+
         # Handles the dealer actions
         if handValue(playerHand) <= 21:
             while handValue(dealerHand) < 17:
@@ -284,12 +292,13 @@ def placeBet(maxBet):
 
 def cardDeck():
     """
-    Returns a list of tuples with the rank and suit for all 52 cards in the deck
+    Returns a list of tuples with the rank and suit for all 52 cards 
+    in the deck
     """
     deck = []
     for suit in (SPADES, CLUBS, HEARTS, DIAMONDS):
         # Numbered cards between 2 and 10
-        for rank in range (2, 11):
+        for rank in range(2, 11):
             deck.append((str(rank), suit))
         # Jacks, Queens, Kings and Aces
         for rank in ('J', 'Q', 'K', 'A'):
@@ -318,10 +327,11 @@ def showHands(playerHand, dealerHand, showDealerHand):
 
 def handValue(cards):
     """
-    Returns the value of the cards. Numbered cards are worth their displayed number,
-    Jacks, Queens and Kings are worth 10. Aces are worth 11 or 1, an ace will be
-    assigned a value of 11 unless that would equal more than 21, in which case it 
-    will be assigned a value of 1
+    Returns the value of the cards. Numbered cards are worth their 
+    displayed number. Jacks, Queens and Kings are worth 10. 
+    Aces are worth 11 or 1, an ace will be assigned a value of 11 
+    unless that would equal more than 21, in which case it will be 
+    assigned a value of 1
     """
     value = 0 
     acesDealt = 0
@@ -380,7 +390,8 @@ def playerMove(playerHand, chips):
         # Displays the available moves to the player
         moves = ['(H)it', '(S)tand']
 
-        # The player can double down on their bet when their cards are first dealt
+        # The player can double down on their bet when their cards 
+        # are first dealt
         if len(playerHand) == 2 and chips > 0:
             moves.append('(D)ouble down')
 
@@ -392,8 +403,7 @@ def playerMove(playerHand, chips):
         if move == 'D' and '(D)ouble down' in moves:
             return move
 
+
 homeTitle()
 check_existing_user()
 gameRules()
-
-
