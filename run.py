@@ -22,7 +22,7 @@ current_user = {'name': 'password'}
 
 def homeTitle():
     """
-    Function to display the game title with card suit logos. Lettering was 
+    Function to display the game title with card suit logos. Lettering was
     created using ASCII art generator (https://patorjk.com/)
     """
     print("=================================================================")
@@ -112,7 +112,7 @@ def sign_in():
 
 def gameRules():
     """
-    Asks the player if they would like to see the game rules before 
+    Asks the player if they would like to see the game rules before
     they start the game
     """
     rules = input("Would you like to see the game rules? Y/N\n")
@@ -127,7 +127,7 @@ def gameRules():
 
 def displayGameRules():
     """
-    Function that prints the game rules to the console once the player has 
+    Function that prints the game rules to the console once the player has
     signed in
     """
     print("Starting with 2 cards, try to get as close to 21 as possible.")
@@ -154,7 +154,7 @@ def displayGameRules():
 
 def startGame():
     """
-    Function to let the player start the game, go back to the rules or 
+    Function to let the player start the game, go back to the rules or
     exit the game
     """
     start_game = input("Ready to play Blackjack? Y/N/EXIT\n")
@@ -174,7 +174,7 @@ def playBlackjack():
 
     # Main game loop that keeps count of the players money, places their
     # bets, deals the cards and handles player moves. Once all moves are
-    # made the final hands are shown, the result is evaluated and the 
+    # made the final hands are shown, the result is evaluated and the
     # winnings are added to or taken from the players account
     while True:
         # Check if the player has money to bet, exits the loop if money is 0
@@ -192,19 +192,19 @@ def playBlackjack():
         dealerHand = [deck.pop(), deck.pop()]
         playerHand = [deck.pop(), deck.pop()]
 
-        # Handle player actions, lets the player hit, stand or double down 
+        # Handle player actions, lets the player hit, stand or double down
         # on their bet. Loops until the player stands or busts
         print('Bet:', bet)
         while True:
             showHands(playerHand, dealerHand, False)
             print()
 
-            # Evaluates the value of the players hand, breaks the loop 
+            # Evaluates the value of the players hand, breaks the loop
             # and busts if the value is over 21
             if handValue(playerHand) > 21:
                 break
 
-            # Executes the players move, either H, S or D to hit, stand 
+            # Executes the players move, either H, S or D to hit, stand
             # or double down
             move = playerMove(playerHand, chips - bet)
 
@@ -292,7 +292,7 @@ def placeBet(maxBet):
 
 def cardDeck():
     """
-    Returns a list of tuples with the rank and suit for all 52 cards 
+    Returns a list of tuples with the rank and suit for all 52 cards
     in the deck
     """
     deck = []
@@ -327,13 +327,13 @@ def showHands(playerHand, dealerHand, showDealerHand):
 
 def handValue(cards):
     """
-    Returns the value of the cards. Numbered cards are worth their 
-    displayed number. Jacks, Queens and Kings are worth 10. 
-    Aces are worth 11 or 1, an ace will be assigned a value of 11 
-    unless that would equal more than 21, in which case it will be 
+    Returns the value of the cards. Numbered cards are worth their
+    displayed number. Jacks, Queens and Kings are worth 10.
+    Aces are worth 11 or 1, an ace will be assigned a value of 11
+    unless that would equal more than 21, in which case it will be
     assigned a value of 1
     """
-    value = 0 
+    value = 0
     acesDealt = 0
 
     # Adds the value for Jacks, Queens and Kings
@@ -351,7 +351,6 @@ def handValue(cards):
     for i in range(acesDealt):
         if value + 10 <= 21:
             value += 10
-    
     return value
 
 
@@ -386,11 +385,11 @@ def playerMove(playerHand, chips):
     Asks the player for their move and returns 'H' for hit, 'S' for
     stand and 'D' for double down
     """
-    while True: 
+    while True:
         # Displays the available moves to the player
         moves = ['(H)it', '(S)tand']
 
-        # The player can double down on their bet when their cards 
+        # The player can double down on their bet when their cards
         # are first dealt
         if len(playerHand) == 2 and chips > 0:
             moves.append('(D)ouble down')
@@ -399,7 +398,7 @@ def playerMove(playerHand, chips):
         movePrompt = ', '.join(moves) + '> '
         move = input(movePrompt).upper()
         if move in ('H', 'S'):
-            return move 
+            return move
         if move == 'D' and '(D)ouble down' in moves:
             return move
 
