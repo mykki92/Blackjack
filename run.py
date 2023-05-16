@@ -17,7 +17,7 @@ HEARTS = chr(9829)
 DIAMONDS = chr(9830)
 CARDBACK = 'cardback'
 
-current_user = {'username': 'password'}
+current_user = {'name': 'password'}
 
 
 def homeTitle():
@@ -160,6 +160,8 @@ def startGame():
     """
     start_game = input("Ready to play Blackjack? Y/N/EXIT\n")
     if start_game.upper() == "Y":
+        os.system('clear')
+        homeTitle()
         playBlackjack()
     elif start_game.upper() == "N":
         gameRules()
