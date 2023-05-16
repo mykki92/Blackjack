@@ -26,6 +26,10 @@ def get_login_data():
 
 
 def updateChipsBalance(current_user, chips):
+    """
+    Function to update the players chips balance on the google sheet
+    which is called after each final hand is evaluated
+    """
     user_row = USERS.find(current_user).row
     USERS.update_cell(user_row, 3, chips)
 
@@ -71,5 +75,5 @@ def validate_user_login(user, password):
         print(f"Invalid user input: {m}")
         return False
     else:
-        print("\nSign Up confirmed....")
+        print("\nAccount created succesfully!")
         return True

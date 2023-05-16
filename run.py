@@ -45,7 +45,7 @@ def check_existing_user():
     Checks if user already has a login, if yes asks them to log in,
     if no asks them to sign up
     """
-    user_check = input("Have you played here before? Y/N\n")
+    user_check = input("Welcome! Do you have an account here? Y/N\n")
     if user_check.upper() == "Y":
         sign_in()
     elif user_check.upper() == "N":
@@ -62,7 +62,7 @@ def add_new_user():
     googlesheet with new details
     """
     time.sleep(1)
-    print("\nSIGN UP HERE!!")
+    print("\nCreate an account here and get 5000 chips to start playing!")
     time.sleep(1)
     print("\nUsername and Password are case sensitive")
     print("Username and Password should be at least 6 characters")
@@ -72,9 +72,11 @@ def add_new_user():
 
     validate = validate_user_login(user_input, user_password)
     if validate:
-        login = [user_input, user_password, 10000]
+        login = [user_input, user_password, 5000]
         update_login_data(login)
+        time.sleep(2)
         os.system('clear')
+        homeTitle()
         sign_in()
     else:
         time.sleep(2)
@@ -229,7 +231,11 @@ def playBlackjack():
             print("Bust! Looks like you're outta luck!")
             more_chips = input("Press $ to get more chips! ")
             if more_chips == "$":
+                getChips(chips)
+                print("5000 chips added to your account!")
+                time.sleep(2)
                 os.system('clear')
+                homeTitle()
                 playBlackjack()
 
         # Player places their bet at the start of each round
@@ -310,7 +316,7 @@ def playBlackjack():
             print(f'You won {bet}!')
             chips += bet
         elif playerValue == dealerValue:
-            print('Tie! Your bet is returned.')          
+            print('Tie! Your bet is returned.')
         updateChipsBalance(current_user['name'], chips)
         input('Press Enter to play again!')
         print('\n\n')
@@ -449,6 +455,10 @@ def playerMove(playerHand, chips):
             return move
         if move == 'D' and '(D)ouble down' in moves:
             return move
+
+
+def getChips(chips):
+    updateChipsBalance(current_user['name'], 5000)
 
 
 homeTitle()
