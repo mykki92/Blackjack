@@ -131,6 +131,8 @@ def displayGameRules():
     Function that prints the game rules to the console once the player has
     signed in
     """
+    os.system('clear')
+    homeTitle()
     print("Starting with 2 cards, try to get as close to 21 as possible.")
     time.sleep(1)
     print("Going over 21 is a bust and you will lose your bet.")
@@ -166,10 +168,48 @@ def startGame():
     elif start_game.upper() == "N":
         gameRules()
     elif start_game.upper() == "EXIT":
+        exitGame()
+    else:
+        print("Invalid input, type Y, N or EXIT")
+        startGame()
+
+
+def exitGame():
+    """
+    Function to display a screen before the player exits the game
+    giving them the option to go back and look at the rules or
+    restart the game
+    """
+    os.system('clear')
+    homeTitle()
+    leave_game = input("Are you sure you want to leave the game? Y/N\n")
+    if leave_game.upper() == "Y":
+        print('Thanks for playing, come again soon!')
+        time.sleep(2)
         sys.exit()
+    elif leave_game.upper() == "N":
+        rules = input("Would you like to see the game rules? Y/N\n")
+        if rules.upper() == "Y":
+            os.system('clear')
+            homeTitle()
+            displayGameRules()
+        elif rules.upper() == "N":
+            restart = input("Would you like to restart the game? Y/N\n")
+            if restart.upper() == "Y":
+                os.system('clear')
+                homeTitle()
+                playBlackjack()
+            elif restart.upper() == "N":
+                exitGame()
+            else:
+                print("Invalid input, type Y or N")
+                exitGame()
+        else:
+            print("Invalid input, type Y or N")
+            exitGame()
     else:
         print("Invalid input, type Y or N")
-        startGame()
+        gameRules()
 
 
 def playBlackjack():
@@ -186,6 +226,7 @@ def playBlackjack():
             print("Bust! Looks like you're outta luck!")
             more_chips = input("Press $ to get more chips! ")
             if more_chips == "$":
+                os.system('clear')
                 playBlackjack()
 
         # Player places their bet at the start of each round
@@ -282,8 +323,7 @@ def placeBet(maxBet):
         print(f'How much you wanna bet?? (1-{maxBet}, or EXIT)')
         bet = input('> ').upper().strip()
         if bet == 'EXIT':
-            print('Thanks for playing, come again soon!')
-            sys.exit()
+            exitGame()
 
         # Loops the function to place a bet if player enters an invalid value
         if not bet.isdecimal():
