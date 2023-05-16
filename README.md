@@ -179,14 +179,12 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 <details>
 <summary>run.py</summary>
 <img src="docs/validation/run-validation.png" alt="A screenshot of pep8 validator confirming run.py code.">
-</details>
 <img src="docs/validation/run_validation-2" alt="A screenshot of pep8 validator confirming run.py code.">
 </details>
 
 <details>
 <summary>gsheet.py</summary>
 <img src="docs/validation/gsheet-validation.png" alt="A screenshot of pep8 validator confirming gsheet.py code.">
-</details>
 <img src="docs/validation/gsheet-validation-2.png" alt="A screenshot of pep8 validator confirming gsheet.py code.">
 </details>
 
