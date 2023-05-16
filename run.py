@@ -116,19 +116,25 @@ def signIn():
         checkExistingUser()
 
 
-def gameRules():
+def gameMenu():
     """
     Asks the player if they would like to see the game rules before
     they start the game
     """
-    rules = input("Would you like to see the game rules? Y/N\n")
-    if rules.upper() == "Y":
+    print("What would you like to do?\n")
+    print("Press I for game instructions")
+    print("Press S to start the game")
+    print("Press X to exit")
+    menu_selection = input("Type your choice here: \n")
+    if menu_selection == "i":
         displayGameRules()
-    elif rules.upper() == "N":
+    elif menu_selection == "s":
         startGame()
+    elif menu_selection == "x":
+        exitGame()
     else:
-        print("Invalid input, type Y or N")
-        gameRules()
+        print("Invalid input, type i, s or x ")
+        gameMenu()
 
 
 def displayGameRules():
@@ -171,7 +177,9 @@ def startGame():
         homeTitle()
         playBlackjack()
     elif start_game.upper() == "N":
-        gameRules()
+        os.system('clear')
+        homeTitle()
+        gameMenu()
     elif start_game.upper() == "EXIT":
         exitGame()
     else:
@@ -187,7 +195,7 @@ def exitGame():
     """
     os.system('clear')
     homeTitle()
-    leave_game = input("Are you sure you want to leave the game? Y/N\n")
+    leave_game = input("Deposit your chips and leave the game? Y/N\n")
     if leave_game.upper() == "Y":
         print('Thanks for playing, come again soon!')
         time.sleep(2)
@@ -214,7 +222,7 @@ def exitGame():
             exitGame()
     else:
         print("Invalid input, type Y or N")
-        gameRules()
+        gameMenu()
 
 
 def playBlackjack():
@@ -471,7 +479,7 @@ def main():
     """
     homeTitle()
     checkExistingUser()
-    gameRules()
+    gameMenu()
 
 
 main()
