@@ -104,6 +104,10 @@ Python
 * [CodeAnywhere](https://app.codeanywhere.com/) was the IDE used for writing and editing code.
 * [Heroku](https://id.heroku.com/) was used as the hosting platform for this site.
 * [ASCII art generator](https://patorjk.com/software/taag/#p=display&f=Big%20Money-ne&t=Blackjack) was used to generate title text.
+* [PEP8 Python Validator](https://pep8ci.herokuapp.com/) Code institute's own Python Linter was used to validate all Python code in this project.
+* [Lucidchart](https://lucid.app/) was used to create logic flowchart.
+* [amiresponsive](https://ui.dev/amiresponsive) was used to test the website across different screens and generate the picture at the head of this file.
+
 
 #### 3rd Party Python Libraries Used
 * [Gspread / Google Sheets API](https://github.com/burnash/gspread) was used to handle getting/sending data to the google sheet used in the project. This is also not a standard feature of python, so it was necessary to install it for the purposes of this project.
@@ -164,7 +168,7 @@ The site was tested using the following browsers:
 * Microsoft Edge
 * Safari
 
-# Browser Compatability
+### Browser Compatability
 The site was tested on the following devices:
 * Google Pixel 7
 * Samsung Galaxy A7 Lite Tab
