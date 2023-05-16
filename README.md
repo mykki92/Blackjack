@@ -74,6 +74,13 @@ Blackjack, also known as 21, is a card game where players attempt to reach a sco
 
 ## Technical Design
 ### Flowchart
+A flowchart was created using [Lucidchart](https://lucid.app/) to visualise the logic flow of the game.
+
+<details>
+    <summary>Flowchart</summary>
+    <p>Blackjack game logic:</p>
+    <img src="docs/technical-design/flowchart.png" alt="A screenshot of the flowchart of game logic">
+</details><br>
 
 ### Data Models
 * The Google Sheets API was used for user data.
