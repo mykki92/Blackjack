@@ -17,7 +17,7 @@ HEARTS = chr(9829)
 DIAMONDS = chr(9830)
 CARDBACK = 'cardback'
 
-current_user = {'name': 'password'}
+current_user = {'username': 'password'}
 
 
 def homeTitle():
@@ -44,10 +44,10 @@ def check_existing_user():
     Checks if user already has a login, if yes asks them to log in,
     if no asks them to sign up
     """
-    exist_check = input("Have you played here before? Y/N\n")
-    if exist_check.upper() == "Y":
+    user_check = input("Have you played here before? Y/N\n")
+    if user_check.upper() == "Y":
         sign_in()
-    elif exist_check.upper() == "N":
+    elif user_check.upper() == "N":
         add_new_user()
     else:
         print("Invalid input, type Y or N")
@@ -178,11 +178,13 @@ def playBlackjack():
     # made the final hands are shown, the result is evaluated and the
     # winnings are added to or taken from the players account
     while True:
-        # Check if the player has money to bet, exits the loop if money is 0
+        # Checks if the player has money to bet, restarts the game with
+        # 5000 chips if the player has bust
         if chips <= 0:
             print("Bust! Looks like you're outta luck!")
-            print("Thanks for playing, come again soon!")
-            sys.exit()
+            more_chips = input("Press $ to get more chips! ")
+            if more_chips == "$":
+                playBlackjack()
 
         # Player places their bet at the start of each round
         print('Chips:', chips)

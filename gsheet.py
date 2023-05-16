@@ -25,6 +25,11 @@ def get_login_data():
     return users_login
 
 
+def playerBalance():
+    balance = USERS.get_all_records()
+    print(balance)
+
+
 def update_login_data(data):
     """
     Update user googlesheet with new username and
@@ -68,3 +73,4 @@ def validate_user_login(user, password):
     else:
         print("\nSign Up confirmed....")
         return True
+
