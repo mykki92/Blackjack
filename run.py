@@ -71,7 +71,7 @@ def add_new_user():
 
     validate = validate_user_login(user_input, user_password)
     if validate:
-        login = [user_input, user_password]
+        login = [user_input, user_password, 10000]
         update_login_data(login)
         os.system('clear')
         sign_in()
@@ -99,8 +99,10 @@ def sign_in():
                 time.sleep(1)
                 os.system('clear')
                 current_user['name'] = data['USERNAME']
+                current_user['chips'] = data['CHIPS']
                 homeTitle()
                 print(f"\nWelcome back {current_user['name']}!")
+                print(f"You have {current_user['chips']} chips in your account!")
             else:
                 print("Incorrect password, try again")
                 sign_in()
@@ -213,7 +215,7 @@ def exitGame():
 
 
 def playBlackjack():
-    chips = 5000
+    chips = current_user['chips']
 
     # Main game loop that keeps count of the players money, places their
     # bets, deals the cards and handles player moves. Once all moves are
