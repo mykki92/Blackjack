@@ -201,28 +201,13 @@ def exitGame():
         time.sleep(2)
         sys.exit()
     elif leave_game.upper() == "N":
-        rules = input("Would you like to see the game rules? Y/N\n")
-        if rules.upper() == "Y":
-            os.system('clear')
-            homeTitle()
-            displayGameRules()
-        elif rules.upper() == "N":
-            restart = input("Would you like to restart the game? Y/N\n")
-            if restart.upper() == "Y":
-                os.system('clear')
-                homeTitle()
-                playBlackjack()
-            elif restart.upper() == "N":
-                exitGame()
-            else:
-                print("Invalid input, type Y or N")
-                exitGame()
-        else:
-            print("Invalid input, type Y or N")
-            exitGame()
+        time.sleep(1)
+        os.system('clear')
+        homeTitle()
+        gameMenu()
     else:
         print("Invalid input, type Y or N")
-        gameMenu()
+        exitGame()
 
 
 def playBlackjack():
