@@ -16,7 +16,7 @@ SHEET = GSPREAD_CLIENT.open('blackjack_users')
 USERS = SHEET.worksheet('users')
 
 
-def get_login_data():
+def getLoginData():
     """
     Extract login data from googlesheet to validate user
     data provided
@@ -34,7 +34,7 @@ def updateChipsBalance(current_user, chips):
     USERS.update_cell(user_row, 3, chips)
 
 
-def update_login_data(data):
+def updateLoginData(data):
     """
     Update user googlesheet with new username and
     password data input by the user
@@ -42,7 +42,7 @@ def update_login_data(data):
     USERS.append_row(data)
 
 
-def validate_user_login(user, password):
+def validateUserLogin(user, password):
     """
     Function to check if the provided username already exists, and
     that the username and password entered are valid. If the input
@@ -57,7 +57,7 @@ def validate_user_login(user, password):
         print(f"\nInvalid Input: {v}")
         return False
     try:
-        existing_user = get_login_data()
+        existing_user = getLoginData()
         for ind in existing_user:
             if ind["USERNAME"] == user:
                 raise ValueError(

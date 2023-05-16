@@ -5,9 +5,9 @@ import time
 import os
 
 # Internal imports
-from gsheet import get_login_data
-from gsheet import update_login_data
-from gsheet import validate_user_login
+from gsheet import getLoginData
+from gsheet import updateLoginData
+from gsheet import validateUserLogin
 from gsheet import updateChipsBalance
 
 # Global variables using Unicode code points
@@ -40,23 +40,23 @@ def homeTitle():
     print("                                $$$$$$ ")
 
 
-def check_existing_user():
+def checkExistingUser():
     """
     Checks if user already has a login, if yes asks them to log in,
     if no asks them to sign up
     """
     user_check = input("Welcome! Do you have an account here? Y/N\n")
     if user_check.upper() == "Y":
-        sign_in()
+        signIn()
     elif user_check.upper() == "N":
-        add_new_user()
+        addNewUser()
     else:
         print("Invalid input, type Y or N")
         time.sleep(1)
-        check_existing_user()
+        checkExistingUser()
 
 
-def add_new_user():
+def addNewUser():
     """
     Validates new login data provided by the user and updates the
     googlesheet with new details
@@ -70,20 +70,20 @@ def add_new_user():
     user_password = input("\nEnter New Password: \n")
     time.sleep(1)
 
-    validate = validate_user_login(user_input, user_password)
+    validate = validateUserLogin(user_input, user_password)
     if validate:
         login = [user_input, user_password, 5000]
-        update_login_data(login)
+        updateLoginData(login)
         time.sleep(2)
         os.system('clear')
         homeTitle()
-        sign_in()
+        signIn()
     else:
         time.sleep(2)
-        add_new_user()
+        addNewUser()
 
 
-def sign_in():
+def signIn():
     """
     Validates the users login information by comparing against
     data stored in the googlesheet
@@ -93,7 +93,7 @@ def sign_in():
     username = input("\nUsername: \n")
     password = input("\nPassword: \n")
 
-    logins = get_login_data()
+    logins = getLoginData()
     check_login = 0
     for data in logins:
         if username == data['USERNAME']:
@@ -108,12 +108,12 @@ def sign_in():
                 print(f"You have {current_user['chips']} chips!")
             else:
                 print("Incorrect password, try again")
-                sign_in()
+                signIn()
         else:
             check_login += 1
     if check_login == len(logins):
         print("User does not exist, try again")
-        check_existing_user()
+        checkExistingUser()
 
 
 def gameRules():
@@ -458,9 +458,20 @@ def playerMove(playerHand, chips):
 
 
 def getChips(chips):
+    """
+    Function to add 5000 chips to players account that is called once
+    their chips get to 0
+    """
     updateChipsBalance(current_user['name'], 5000)
 
 
-homeTitle()
-check_existing_user()
-gameRules()
+def main():
+    """
+    Function to control the calling of other functions in the file
+    """
+    homeTitle()
+    checkExistingUser()
+    gameRules()
+
+
+main()
