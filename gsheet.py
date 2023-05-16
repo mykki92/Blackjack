@@ -25,6 +25,11 @@ def get_login_data():
     return users_login
 
 
+def updateChipsBalance(current_user, chips):
+    user_row = USERS.find(current_user).row
+    USERS.update_cell(user_row, 3, chips)
+
+
 def update_login_data(data):
     """
     Update user googlesheet with new username and
@@ -52,7 +57,7 @@ def validate_user_login(user, password):
         for ind in existing_user:
             if ind["USERNAME"] == user:
                 raise ValueError(
-                    "\nUsername already exist"
+                    "\nUsername already exists"
                 )
     except ValueError as e:
         print(f"\nInvalid Username: {e}")

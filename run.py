@@ -8,6 +8,7 @@ import os
 from gsheet import get_login_data
 from gsheet import update_login_data
 from gsheet import validate_user_login
+from gsheet import updateChipsBalance
 
 # Global variables using Unicode code points
 # to set symbols for card suits
@@ -102,7 +103,7 @@ def sign_in():
                 current_user['chips'] = data['CHIPS']
                 homeTitle()
                 print(f"\nWelcome back {current_user['name']}!")
-                print(f"You have {current_user['chips']} chips in your account!")
+                print(f"You have {current_user['chips']} chips!")
             else:
                 print("Incorrect password, try again")
                 sign_in()
@@ -309,8 +310,8 @@ def playBlackjack():
             print(f'You won {bet}!')
             chips += bet
         elif playerValue == dealerValue:
-            print('Tie! Your bet is returned.')
-
+            print('Tie! Your bet is returned.')          
+        updateChipsBalance(current_user['name'], chips)
         input('Press Enter to play again!')
         print('\n\n')
 
