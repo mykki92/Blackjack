@@ -6,7 +6,9 @@ Developed by Michael Roberts
 [Link to live site](https://blackjackpython.herokuapp.com/)
 
 ## Introduction
-Blackjack, also known as 21, is a card game where players attempt to reach a score of 21 — without exceeding it — before the dealer hits 17. You can win if you don't bust and your total is higher than the dealer cards.
+Blackjack, also known as 21, is a card game where players attempt to reach a score of 21 — without exceeding it and losing the hand. You win the hand if you don't bust and your total is higher than the dealers cards.
+
+The player creates an account to get their game chips and places bets on blackjack hands against an automated dealer. Any winnings can be stored in the players account to bet with next time they play the game.
 
 
 ## Contents
@@ -19,19 +21,23 @@ Blackjack, also known as 21, is a card game where players attempt to reach a sco
     * [User Manual](#user-manual)
     * [User Stories](#user-stories)
 * [Technical Design](#technical-design)
-    * [Data Models](#data-models)
     * [Flowchart](#flowchart)
+    * [Data Models](#data-models)
 * [Features](#features)
     * [App Features](#app-features)
     * [Feature Ideas for future development](#feature-ideas-for-future-development)
 * [Technologies Used](#technologies-used)
+    * [Languages Used](#languages-used)
+    * [Other Tools Used](#other-tools-used)
+    * [3rd Party Python Libraries Used](#3rd-party-python-libraries-used)
 * [Deployment & Local Development](#deployment--local-development)
 * [Testing](#testing)
     * [Validation](#validation)
     * [Manual Testing](#manual-testing)
-    * [Automated Testing](#automated-testing)
     * [Bugs](#bugs)
 * [Credits](#credits)
+    * [3rd Party Python Libraries/Code](#3rd-party-python-libraries/code)
+    * [Acknowlegements](#acknowledgements)
 
 ## Project Goals
 ### User Goals
@@ -95,7 +101,6 @@ The website has a single page with several features within the mock python termi
 In future the website could be further developed and improved to offer more games and expand into a general casino-type application, with additional games such as poker, roulette and slot machine games.
 
 ## Technologies Used
-
 ### Languages Used
 Python
 
@@ -109,8 +114,7 @@ Python
 * [Lucidchart](https://lucid.app/) was used to create logic flowchart.
 * [amiresponsive](https://ui.dev/amiresponsive) was used to test the website across different screens and generate the picture at the head of this file.
 
-
-#### 3rd Party Python Libraries Used
+### 3rd Party Python Libraries Used
 * [Gspread / Google Sheets API](https://github.com/burnash/gspread) was used to handle getting/sending data to the google sheet used in the project. This is also not a standard feature of python, so it was necessary to install it for the purposes of this project.
 * [Google OAuth 2.0](https://google-auth.readthedocs.io/en/stable/reference/google.oauth2.credentials.html) was used to set up the connection between the project and the developers personal google account. This was necessary because access to a google account via a program is restricted for security reasons.
 
@@ -162,20 +166,6 @@ This repository can be cloned using the following process:
 9. Hit enter on your keyboard and the project will be cloned.
 
 ## Testing
-### Browser Compatability
-The site was tested using the following browsers: 
-* Google Chrome
-* Mozilla Firefox
-* Microsoft Edge
-* Safari
-
-### Device Testing
-The site was tested on the following devices:
-* Google Pixel 7
-* Samsung Galaxy A7 Lite Tab
-* HP Laptop 14
-* Apple iMac
-
 ### Validation
 
 #### PEP8 Python Validator (Code Institute)
@@ -336,7 +326,7 @@ Code Institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 | When player clicks to get more chips, sometimes the sheet has not updated before the game restarts and the player has the wrong number of chips. | Insert time.sleep(3) in between the getChips and playBlackjack functions to allow time for the sheet to update. |
 
 ## Credits
-### 3rd Party Python Libraries/Modules
+### 3rd Party Python Libraries/Code
 * [Gspread / Google Sheets API](https://github.com/burnash/gspread) was used to handle getting/sending data to the google sheet used in the project.
 * [Google OAuth 2.0](https://google-auth.readthedocs.io/en/stable/reference/google.oauth2.credentials.html) was used to set up the connection between the project and the developers personal google account.
 * [ASCII art generator](https://patorjk.com/software/taag/#p=display&f=Big%20Money-ne&t=Blackjack) was used to generate title text.
