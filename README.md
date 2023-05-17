@@ -51,16 +51,49 @@ The player creates an account to get their game chips and places bets on blackja
 * To make sure any user errors are handled and communicated back to the user.
 
 ## User Experience
-### Target audience
+### Target Audience
 * This game is targeted at people with an interest in Blackjack and people with an interest in computer gaming in general.
 
-### User requirements
+### User Requirements
 * A game that is understandable and works as expected.
 * Log-in works as expected and validates user input correctly.
 * Game moves and the betting system is clearly communicated and displayed to the user.
 * User can quit the game when they want.
 
 ### User Manual
+### Sign In/Sign Up
+When the program starts, the user will be prompted to either:
+* Enter their existing login.
+* Sign up for a new account.
+This choice is navigated by inputting Y or N on the keyboard and pressing enter to submit.
+
+The user will then enter their account details to sign in, or enter a new username and password to create an account and sign in. Correct case sensitive user details must be entered to validate account access.
+
+### Main Menu
+The useer will be taken to the game menu where they will see their chips balance and be given three options:
+* Enter I to see game instructions
+* Enter S to start the game
+* Enter X to exit the game
+
+### Game Instructions
+If I is selected at the main menu, a screen detailing game instructions will appear.
+The user can proceed to the game or return to the main menu.
+
+### Play Game
+When the user starts the game, they will:
+* Be taken to a betting screen where they can see their chips balance and place a bet.
+* Continue to the game screen where they can see their first two cards and one of the dealers cards. The user then has three possible moves:
+    * Enter H to hit and draw another card
+    * Enter D to double down on their bet and draw another card
+    * Enter S to stand and take no more cards
+* The dealer makes their move and the game continues in turn until one player busts or both players take no more cards, reveal their cards and the game result is evaluated.
+* Once the result has been evaluated the chips will be added to or taken from the users chips balance, the user can then play another round or quit the game.
+* If a user loses all their chips, they will be prompted to press any key to get more chips and 5000 chips will be added to their account so they can continue to play.
+    
+### Exit Game
+The user can exit the game by inputting X in the main menu or EXIT before placing a new bet. User will be asked if they are sure they want to exit the game:
+* Enter Y to exit the game.
+* Enter N to go to the game menu.
 
 ### User Stories
 #### First Time User
