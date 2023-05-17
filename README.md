@@ -328,17 +328,12 @@ Code Institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 </details>
 
 ### Bugs
-| Bug Description  | Fix  |
+
+| Bug Description  | Action Taken to Fix  |
 |---|---|
 |Between inputting their username and the password input loading, the user could input characters into empty lines, causing issues with login. | Remove time.sleep(1) from between the username and password inputs being loaded. |
-
-| Bug Description  | Fix  |
-|---|---|
-|Validation issues when using "Press $ to get more chips". | Change input to "Press any button to get more chips". |
-
-| Bug Description  | Fix  |
-|---|---|
-|When player clicks to get more chips, sometimes the sheet has not updated before the game restarts and the player has the wrong number of chips. | Insert time.sleep(3) in between the getChips and playBlackjack functions to allow time for the sheet to update. |
+| Validation issues when using "Press $ to get more chips". | Change input to "Press any button to get more chips". |
+| When player clicks to get more chips, sometimes the sheet has not updated before the game restarts and the player has the wrong number of chips. | Insert time.sleep(3) in between the getChips and playBlackjack functions to allow time for the sheet to update. |
 
 ## Credits
 ### 3rd Party Python Libraries/Modules
