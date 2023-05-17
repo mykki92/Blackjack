@@ -58,19 +58,20 @@ Blackjack, also known as 21, is a card game where players attempt to reach a sco
 
 ### User Stories
 #### First Time User
-1. Set a username and password to sign up for a game account.
-2. Have instructions on how to play the game before starting.
-3. To have a visual representation of the Blackjack game.
-4. For inputs to work as expected and any errors to be flagged by the program.
-5. For the program to be responsive and provide clear progress through the steps of the game.
+1. As a first time user, I want to set a username and password to sign up for a game account.
+2. As a first time user, I want to see clear instructions on how to play the game before starting.
+3. As a first time user, I want to have a visual representation of the Blackjack game as I am playing it.
+4. As a first time user, I want inputs to work as expected and any errors to be flagged by the program.
+5. As a first time user, I want the program to be responsive and provide clear progress and feedback through the steps of the game.
 
 #### Returning User 
-7. Be able to log in with their existing username and password.
-8. Be able skip the instructions if they are familiar with the game.
+7. As a returning user, I want to be able to log in with my existing username and password.
+8. As a returning user, I want to be able to continue the game with my previous chips balance.
+9. As a returning user, I want to be able skip the instructions if they I'm already familiar with the game.
 
 #### Site Owner
-11. Ensure that all data entered by the user is validated so as not to break the program or create bad user experience.
-12. Ensure that all user actions are given feedback in the terminal so that users know what to do next in the game.
+10. As a site owner, I want to ensure that all data entered by the user is validated so as not to break the program or create bad user experience.
+11. As a site owner, I want to ensure that all user actions are given feedback in the terminal so that users know what to do next in the game.
 
 ## Technical Design
 ### Flowchart
@@ -193,6 +194,26 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 </details>
 
 ### Manual Testing
+1. As a first time user, I want to set a username and password to sign up for a game account.
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Sign-up prompt | When prompted for an existing account at the start of the game, answer 'N' and enter new details | Program creates new user account. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="docs/user-stories/user-story-1-1.png" alt="A screenshot of the sign up prompt.">
+    <img src="docs/user-stories/user-story-1-2.png" alt="A screenshot of the sign up process.">
+    <img src="docs/user-stories/user-story-1-3.png" alt="A screenshot of the new account details on gsheet.">
+</details>
+
+
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="docs/manualtest/us1-1.png" alt="A screenshot of the sign up prompt.">
+    <img src="docs/manualtest/us1-2.png" alt="A screenshot of the sign up prompt.">
+</details>
+
 
 ### Automated Testing
 
