@@ -195,6 +195,7 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 
 ### Manual Testing
 1. As a first time user, I want to set a username and password to sign up for a game account.
+
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | Sign-up prompt | When prompted for an existing account at the start of the game, answer 'N' and enter new details | Program creates new user account. | Works as expected. |
@@ -206,14 +207,17 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
     <img src="docs/user-stories/user-story-1-3.png" alt="A screenshot of the new account details on gsheet.">
 </details>
 
+2. As a first time user, I want to see clear instructions on how to play the game before starting.
 
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Menu | When in the main menu, enter 'I' to access instructions. | Program displays instructions and a way to get back to the menu. | Works as expected. |
 
 <details>
     <summary>Screenshots</summary>
-    <img src="docs/manualtest/us1-1.png" alt="A screenshot of the sign up prompt.">
-    <img src="docs/manualtest/us1-2.png" alt="A screenshot of the sign up prompt.">
+    <img src="docs/user-stories/user-story-2-1.png" alt="A screenshot of the game menu.">
+    <img src="docs/user-stories/user-story-2-2.png" alt="A screenshot of the instructions.">
 </details>
-
 
 ### Automated Testing
 
