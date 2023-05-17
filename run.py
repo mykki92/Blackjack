@@ -47,8 +47,12 @@ def checkExistingUser():
     """
     user_check = input("Welcome! Do you have an account here? Y/N\n")
     if user_check.upper() == "Y":
+        os.system('clear')
+        homeTitle()
         signIn()
     elif user_check.upper() == "N":
+        os.system('clear')
+        homeTitle()
         addNewUser()
     else:
         print("Invalid input, type Y or N")
@@ -89,7 +93,7 @@ def signIn():
     data stored in the googlesheet
     """
     time.sleep(1)
-    print("\nLOGIN TO PLAY BLACKJACK!")
+    print("\nSIGN IN TO PLAY BLACKJACK!")
     username = input("\nUsername: \n")
     password = input("\nPassword: \n")
 
@@ -98,8 +102,8 @@ def signIn():
     for data in logins:
         if username == data['USERNAME']:
             if password == data['PASSWORD']:
-                print("\nLog in successful!")
-                time.sleep(1)
+                print("\nSign in successful!")
+                time.sleep(2)
                 os.system('clear')
                 current_user['name'] = data['USERNAME']
                 current_user['chips'] = data['CHIPS']
