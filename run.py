@@ -234,6 +234,8 @@ def playBlackjack():
                 os.system('clear')
                 homeTitle()
                 playBlackjack()
+            else:
+                print("Invalid input, type $")
 
         # Player places their bet at the start of each round
         print('Chips:', chips)

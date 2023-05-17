@@ -162,14 +162,14 @@ This repository can be cloned using the following process:
 9. Hit enter on your keyboard and the project will be cloned.
 
 ## Testing
-### Device Testing
+### Browser Compatability
 The site was tested using the following browsers: 
 * Google Chrome
 * Mozilla Firefox
 * Microsoft Edge
 * Safari
 
-### Browser Compatability
+### Device Testing
 The site was tested on the following devices:
 * Google Pixel 7
 * Samsung Galaxy A7 Lite Tab
@@ -219,7 +219,20 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
     <img src="docs/user-stories/user-story-2-2.png" alt="A screenshot of the instructions.">
 </details>
 
-### Automated Testing
+3. As a first time user, I want to have a visual representation of the Blackjack game as I am playing it.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Screen | Start the game. | Program displays betting function and game cards. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="docs/user-stories/user-story-3-1.png" alt="A screenshot of the game menu.">
+    <img src="docs/user-stories/user-story-3-2.png" alt="A screenshot of the instructions.">
+</details>
+
+4. As a first time user, I want inputs to work as expected and any errors to be flagged by the program.
+5. As a first time user, I want the program to be responsive and provide clear progress and feedback through the steps of the game.
 
 ### Bugs
 | Bug Description  | Fix  |
