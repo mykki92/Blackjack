@@ -297,6 +297,35 @@ Code Institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
     <img src="docs/user-stories/user-story-8-1.png" alt="A screenshot of welcome page with chips balance.">
 </details>
 
+9. As a site owner, I want to ensure that all data entered by the user is validated so as not to break the program or create bad user experience.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Inputs | Enter an incorrect username, password or input. | Program flags the error and a valid input must be entered to continue. | Works as expected. |
+
+<details>
+    <img src="docs/user-stories/user-story-9-1.png" alt="A screenshot of sign in input validation.">
+    <img src="docs/user-stories/user-story-9-2.png" alt="A screenshot of sign in input validation.">
+    <img src="docs/user-stories/user-story-9-3.png" alt="A screenshot of game menu input validation.">
+    <img src="docs/user-stories/user-story-9-4.png" alt="A screenshot of betting input validation.">
+    <img src="docs/user-stories/user-story-9-5.png" alt="A screenshot of game move validation.">
+</details>
+
+10. As a site owner, I want to ensure that all user actions are given feedback in the terminal so that users know what to do next in the game.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Main Game | Enter an incorrect username, password or input. | Program flags the error and a valid input must be entered to continue. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="docs/user-stories/user-story-10-1.png" alt="A screenshot of betting prompt.">
+    <img src="docs/user-stories/user-story-10-2.png" alt="A screenshot of player move prompt.">
+    <img src="docs/user-stories/user-story-10-3.png" alt="A screenshot of dealer move feedback.">
+    <img src="docs/user-stories/user-story-10-4.png" alt="A screenshot of game win feedback.">
+    <img src="docs/user-stories/user-story-10-5.png" alt="A screenshot of card draw feedback.">
+</details>
+
 ### Bugs
 | Bug Description  | Fix  |
 |---|---|
