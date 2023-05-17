@@ -61,6 +61,9 @@ The player creates an account to get their game chips and places bets on blackja
 * User can quit the game when they want.
 
 ### User Manual
+Click the dropdown to view the user manual:
+<details>
+<summary>User Manual</summary>
 ### Sign In/Sign Up
 When the program starts, the user will be prompted to either:
 * Enter their existing login.
@@ -94,6 +97,7 @@ When the user starts the game, they will:
 The user can exit the game by inputting X in the main menu or EXIT before placing a new bet. User will be asked if they are sure they want to exit the game:
 * Enter Y to exit the game.
 * Enter N to go to the game menu.
+</details>
 
 ### User Stories
 #### First Time User
