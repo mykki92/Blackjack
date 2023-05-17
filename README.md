@@ -227,17 +227,40 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 
 <details>
     <summary>Screenshots</summary>
-    <img src="docs/user-stories/user-story-3-1.png" alt="A screenshot of the game menu.">
-    <img src="docs/user-stories/user-story-3-2.png" alt="A screenshot of the instructions.">
+    <img src="docs/user-stories/user-story-3-1.png" alt="A screenshot of the betting function.">
+    <img src="docs/user-stories/user-story-3-2.png" alt="A screenshot of the game cards.">
 </details>
 
 4. As a first time user, I want inputs to work as expected and any errors to be flagged by the program.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Inputs | Enter an incorrect username, password or input. | Program flags the error and input must be entered again. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="docs/user-stories/user-story-4-1.png" alt="A screenshot of sign in input validation.">
+    <img src="docs/user-stories/user-story-4-2.png" alt="A screenshot of sign in input validation.">
+    <img src="docs/user-stories/user-story-4-3.png" alt="A screenshot of game menu input validation.">
+    <img src="docs/user-stories/user-story-4-4.png" alt="A screenshot of betting input validation.">
+    <img src="docs/user-stories/user-story-4-5.png" alt="A screenshot of game move validation.">
+</details>
+
+
 5. As a first time user, I want the program to be responsive and provide clear progress and feedback through the steps of the game.
 
 ### Bugs
 | Bug Description  | Fix  |
 |---|---|
 |Between inputting their username and the password input loading, the user could input characters into empty lines, causing issues with login. | Remove time.sleep(1) from between the username and password inputs being loaded. |
+
+| Bug Description  | Fix  |
+|---|---|
+|Validation issues when using "Press $ to get more chips". | Change input to "Press any button to get more chips". |
+
+| Bug Description  | Fix  |
+|---|---|
+|When player clicks to get more chips, sometimes the sheet has not updated before the game restarts and the player has the wrong number of chips. | Insert time.sleep(3) in between the getChips and playBlackjack functions to allow time for the sheet to update. |
 
 ## Credits
 ### 3rd Party Python Libraries/Modules
