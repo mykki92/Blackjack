@@ -65,13 +65,13 @@ Blackjack, also known as 21, is a card game where players attempt to reach a sco
 5. As a first time user, I want the program to be responsive and provide clear progress and feedback through the steps of the game.
 
 #### Returning User 
-7. As a returning user, I want to be able to log in with my existing username and password.
-8. As a returning user, I want to be able to continue the game with my previous chips balance.
-9. As a returning user, I want to be able skip the instructions if they I'm already familiar with the game.
+6. As a returning user, I want to be able to log in with my existing username and password.
+7. As a returning user, I want to be able to continue the game with my previous chips balance.
+8. As a returning user, I want to be able skip the instructions if they I'm already familiar with the game.
 
 #### Site Owner
-10. As a site owner, I want to ensure that all data entered by the user is validated so as not to break the program or create bad user experience.
-11. As a site owner, I want to ensure that all user actions are given feedback in the terminal so that users know what to do next in the game.
+9. As a site owner, I want to ensure that all data entered by the user is validated so as not to break the program or create bad user experience.
+10. As a site owner, I want to ensure that all user actions are given feedback in the terminal so that users know what to do next in the game.
 
 ## Technical Design
 ### Flowchart
@@ -179,7 +179,7 @@ The site was tested on the following devices:
 ### Validation
 
 #### PEP8 Python Validator (Code Institute)
-Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was used to validate all Python code in this project. All code passed with no errors.
+Code Institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was used to validate all Python code in this project. All code passed with no errors.
 
 <details>
 <summary>run.py</summary>
@@ -198,7 +198,7 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Sign-up prompt | When prompted for an existing account at the start of the game, answer 'N' and enter new details | Program creates new user account. | Works as expected. |
+| Sign In/Sign Up | When prompted for an existing account at the start of the game, answer 'N' and enter new details | Program creates new user account. | Works as expected. |
 
 <details>
     <summary>Screenshots</summary>
@@ -246,7 +246,6 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
     <img src="docs/user-stories/user-story-4-5.png" alt="A screenshot of game move validation.">
 </details>
 
-
 5. As a first time user, I want the program to be responsive and provide clear progress and feedback through the steps of the game.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -260,6 +259,42 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
     <img src="docs/user-stories/user-story-5-3.png" alt="A screenshot of dealer move feedback.">
     <img src="docs/user-stories/user-story-5-4.png" alt="A screenshot of game win feedback.">
     <img src="docs/user-stories/user-story-5-5.png" alt="A screenshot of card draw feedback.">
+</details>
+
+6. As a returning user, I want to be able to log in with my existing username and password.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Sign In | When prompted for an existing account, input Y and enter your username and password | Sign in to your account to access the game. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="docs/user-stories/user-story-6-1.png" alt="A screenshot of sign in prompt.">
+    <img src="docs/user-stories/user-story-6-2.png" alt="A screenshot of sign in details.">
+    <img src="docs/user-stories/user-story-6-3.png" alt="A screenshot of welcome message.">
+</details>
+
+7. As a returning user, I want to be able to continue the game with my previous chips balance.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Sign In | Sign in to your account when prompted at the start of the game. | Access your account and see a welcome message with your accrued chips balance to use in the game. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="docs/user-stories/user-story-7-1.png" alt="A screenshot of welcome page with chips balance.">
+    <img src="docs/user-stories/user-story-7-2.png" alt="A screenshot of betting page with chips balance.">
+</details>
+
+8. As a returning user, I want to be able skip the instructions if I'm already familiar with the game.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Menu | When in main menu, enter 'S' to start the game immediately. | Game loads withput going to the menu screen. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="docs/user-stories/user-story-8-1.png" alt="A screenshot of welcome page with chips balance.">
 </details>
 
 ### Bugs

@@ -137,7 +137,7 @@ def gameMenu():
     elif menu_selection == "x":
         exitGame()
     else:
-        print("Invalid input, type i, s or x ")
+        print("Invalid input, type I, S or X. ")
         gameMenu()
 
 
