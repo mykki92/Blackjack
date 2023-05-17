@@ -223,7 +223,7 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Game Screen | Start the game. | Program displays betting function and game cards. | Works as expected. |
+| Main Game | Start the game. | Program displays betting function and game cards. | Works as expected. |
 
 <details>
     <summary>Screenshots</summary>
@@ -248,6 +248,19 @@ Code institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 
 
 5. As a first time user, I want the program to be responsive and provide clear progress and feedback through the steps of the game.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Main Game | Play through the game. | See clear feedback and game information and prompts for input. | Works as expected. |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="docs/user-stories/user-story-5-1.png" alt="A screenshot of betting prompt.">
+    <img src="docs/user-stories/user-story-5-2.png" alt="A screenshot of player move prompt.">
+    <img src="docs/user-stories/user-story-5-3.png" alt="A screenshot of dealer move feedback.">
+    <img src="docs/user-stories/user-story-5-4.png" alt="A screenshot of game win feedback.">
+    <img src="docs/user-stories/user-story-5-5.png" alt="A screenshot of card draw feedback.">
+</details>
 
 ### Bugs
 | Bug Description  | Fix  |
