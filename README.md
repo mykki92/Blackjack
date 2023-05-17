@@ -64,6 +64,7 @@ The player creates an account to get their game chips and places bets on blackja
 Click the dropdown to view the user manual:
 <details>
 <summary>User Manual</summary>
+
 ### Sign In/Sign Up
 When the program starts, the user will be prompted to either:
 * Enter their existing login.
