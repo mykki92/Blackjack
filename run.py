@@ -226,16 +226,21 @@ def playBlackjack():
         # 5000 chips if the player has bust
         if chips <= 0:
             print("Bust! Looks like you're outta luck!")
-            more_chips = input("Press $ to get more chips! ")
-            if more_chips == "$":
+            more_chips = input("Press any button to get more chips! ")
+            if more_chips == "":
                 getChips(chips)
                 print("5000 chips added to your account!")
-                time.sleep(2)
+                time.sleep(3)
                 os.system('clear')
                 homeTitle()
                 playBlackjack()
             else:
-                print("Invalid input, type $")
+                getChips(chips)
+                print("5000 chips added to your account!")
+                time.sleep(3)
+                os.system('clear')
+                homeTitle()
+                playBlackjack()
 
         # Player places their bet at the start of each round
         print('Chips:', chips)
