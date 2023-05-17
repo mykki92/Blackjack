@@ -304,6 +304,7 @@ Code Institute's own Python Linter [pep8](https://pep8ci.herokuapp.com/) was use
 | Game Inputs | Enter an incorrect username, password or input. | Program flags the error and a valid input must be entered to continue. | Works as expected. |
 
 <details>
+    <summary>Screenshots</summary>
     <img src="docs/user-stories/user-story-9-1.png" alt="A screenshot of sign in input validation.">
     <img src="docs/user-stories/user-story-9-2.png" alt="A screenshot of sign in input validation.">
     <img src="docs/user-stories/user-story-9-3.png" alt="A screenshot of game menu input validation.">
