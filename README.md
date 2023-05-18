@@ -12,10 +12,10 @@ The player creates an account to get their game chips and places bets on blackja
 
 
 ## Contents
-* [Project Goals](#project-goals)<br>
+* [Project Goals](#project-goals)
     * [User Goals](#user-goals)
     * [Site Owner Goals](#site-owner-goals)
-* [User Experience](#user-experience)<br>
+* [User Experience](#user-experience)
     * [Target Audience](#target-audience)
     * [User Requirements](#user-requirements)
     * [User Manual](#user-manual)
@@ -128,6 +128,10 @@ A flowchart was created using [Lucidchart](https://lucid.app/) to visualise the 
 </details><br>
 
 ### Data Models
+* Dictionaries were used to store user data.
+    * This was used to verify user details when signing up and signing into the game and to keep a running balance of game chips for each user.
+* Lists of tuples were used to format the card layout.
+    * These lists could then be iterated through at random to make player and dealer hands.
 * The Google Sheets API was used for user data.
     * This allows user data to be saved so a user can create an account and use it to sign in to the game.
 
