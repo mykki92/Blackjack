@@ -138,6 +138,94 @@ A flowchart was created using [Lucidchart](https://lucid.app/) to visualise the 
 ## Features
 The website has a single page with several features within the mock python terminal. These features are listed below.
 ### App Features
+<details>
+    <summary>Game Title</summary>
+    <p>This is what the user sees upon loading the site. The title text appears with a simple animation for visual appeal. There is also a login/signup feature here.</p>
+    <ul>
+        <li>
+            <p>Sign Up/Sign In </p>
+        </li>
+        <li>
+            <img src="docs/features/signup-signin.png" alt="A screenshot of the signup/signin feature">
+        </li>
+        <li>
+            <p>User story covered: 1, 6, 7</p>
+        </li>
+        <li>
+            <p>User Validation - you cannot log in with an account that doesn't exist or with an incorrect password.</p>
+        </li>
+        <li>
+            <img src="docs/features/user-validation.png" alt="A screenshot of the user validation">
+            <img src="docs/features/user-validation-2.png" alt="A screenshot of the user validation">
+        </li>
+        <li>
+            <p>User story covered: 4, 9</p>
+        </li>
+    </ul>
+</details>
+
+<details>
+    <summary>Menu</summary>
+    <p>This is what the user sees upon loggin in successfully.</p>
+    <ul>
+        <li>
+            <p>Game Menu, allowing the player to start the game, view instructions, or exit.</p>
+        </li>
+        <li>
+            <img src="docs/features/game-menu.png" alt="A screenshot of the game menu">
+        </li>
+        <li>
+            <p>User story covered: 2, 8</p>
+        </li>
+        <li>
+            <p>Game Instructions, showing the user how to play the game.</p>
+        </li>
+        <li>
+            <img src="docs/features/game-instructions.png" alt="A screenshot of instructions">
+        </li>
+        <li>
+            <p>User stories covered: 2, 8</p>
+        </li>
+        <li>
+            <p>Exit Game.</p>
+        </li>
+        <li>
+            <img src="docs/features/exit-game.png" alt="A screenshot of exit screen">
+        </li>
+</details>
+
+<details>
+    <summary>Blackjack Game</summary>
+    <p>This is what the user sees when starting the game from the game menu.</p>
+    <ul>
+        <li>
+            <p>An input for the user to place their bets from their available game chips.</p>
+        </li>
+        <li>
+            <img src="docs/features/player-bet.png" alt="A screenshot of a player bet">
+        </li>
+        <li>
+            <p>User story covered: 3, 5, 10</p>
+        </li>
+        <li>
+            <p>A representation of the Blackjack game featuring game cards and move options to Hit, Stand or Double Down.</p>
+        </li>
+        <li>
+            <img src="docs/features/game-screen.png" alt="A screenshot of a blackjack game">
+        </li>
+        <li>
+            <p>User story covered: 3, 5, 10</p>
+        </li>
+        <li>
+            <p>When each hand is completed, the players chips balance is updated and they are given the option to play another hand or deposit their chips and exit the game.</p>
+        </li>
+        <li>
+            <img src="docs/features/game-end.png" alt="A screenshot of a completed game">
+        </li>
+        <li>
+            <p>User story covered: 3, 5, 10</p>
+        </li>
+</details>
 
 ### Feature Ideas for Future Development
 In future the website could be further developed and improved to offer more games and expand into a general casino-type application, with additional games such as poker, roulette and slot machine games.
